@@ -1,6 +1,6 @@
 ## Задание 1. Решение
 
-```
+```sql
 SELECT
     users.id AS `ID`,
     CONCAT_WS(' ', users.first_name, users.last_name) AS `Name`,
@@ -24,7 +24,8 @@ HAVING
 
 ## Задание 2. Решение
 
-###Установка
+
+### Установка
 
 1. Установить Git, PHP 7.3, composer, MariaDB/MySQL, создать базу данных для проекта.
 2. Клонировать проект из git репозитория:
@@ -213,7 +214,7 @@ API должен иметь 2 метода:
 
 rates: Получение всех курсов с учетом комиссии = 2% (GET запрос) в формате:
 {
-"USD” : <rate>,
+"USD" : <rate>,
 ...
 }
 
@@ -257,12 +258,12 @@ value: 1.00
 
 ```json
 {
-    "currency_from” : BTC,
-    "currency_to” : USD,
-    "value”: 1.00,
-    "converted_value”: 1.00,
-    "rate” : 1.00,
-    "created_at”: TIMESTAMP
+    "currency_from" : "BTC",
+    "currency_to" : "USD",
+    "value": 1.00,
+    "converted_value": 1.00,
+    "rate" : 1.00,
+    "created_at": TIMESTAMP
 }
 ```
 
@@ -270,9 +271,9 @@ value: 1.00
 В случае ошибки:
 ```json
 {
-    "status”: "error”,
-    "code”: 403,
-    "message”: "Invalid token”
+    "status": "error",
+    "code": 403,
+    "message": "Invalid token"
 }
 ```
 
