@@ -39,8 +39,13 @@ git clone https://github.com/exdiman/laravel-meleton-test.git
 composer install
 ```
 
-4. Проверить наличие конфигурационного файла `.env` в корне проекта. Если его нет, то создать его вручную, путем 
-копирования файла `.env.example`.
+4. Создать конфигурационный файла `.env` в корне проекта путем 
+копирования файла `.env.example`. Для этого выполнить команд:
+```shell
+composer run-script post-root-package-install
+composer run-script post-create-project-cmd
+
+```
    
 5. В файле `.env` указать параметры для подключения к БД, bearer token, размер комиссии при конвертациии валют:
 
@@ -80,11 +85,11 @@ POST http://127.0.0.1:8000/api/v1/convert
 
 Параметры:
 
-`
+```
 currency_from: USD // исходная валюта
 currency_to: BTC // валюта в которую конвертируем
 value: 1.00 // количество единиц исходной валюты
-`
+```
 
 ### Tests
 
