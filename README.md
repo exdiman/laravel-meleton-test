@@ -83,6 +83,14 @@ currency_from: USD // исходная валюта
 currency_to: BTC // валюта в которую конвертируем
 value: 1.00 // количество единиц исходной валюты
 
+### Tests
+
+Частично написаны тесты - на примере одного сервиса.
+
+```shell
+php artisan test
+```
+
 ### Затраченное время
 
 ~8-9 часов с 12 часов 25.02 по 10 часов 26.02
@@ -205,7 +213,7 @@ API должен иметь 2 метода:
 
 rates: Получение всех курсов с учетом комиссии = 2% (GET запрос) в формате:
 {
-“USD” : <rate>,
+"USD” : <rate>,
 ...
 }
 
@@ -249,12 +257,12 @@ value: 1.00
 
 ```json
 {
-    “currency_from” : BTC,
-    “currency_to” : USD,
-    “value”: 1.00,
-    “converted_value”: 1.00,
-    “rate” : 1.00,
-    “created_at”: TIMESTAMP
+    "currency_from” : BTC,
+    "currency_to” : USD,
+    "value”: 1.00,
+    "converted_value”: 1.00,
+    "rate” : 1.00,
+    "created_at”: TIMESTAMP
 }
 ```
 
@@ -262,9 +270,9 @@ value: 1.00
 В случае ошибки:
 ```json
 {
-    “status”: “error”,
-    “code”: 403,
-    “message”: “Invalid token”
+    "status”: "error”,
+    "code”: 403,
+    "message”: "Invalid token”
 }
 ```
 
